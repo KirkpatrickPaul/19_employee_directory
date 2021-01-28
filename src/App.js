@@ -3,41 +3,39 @@ import Card from './components/Card';
 import Container from './components/Container';
 import Footer from './components/Footer';
 import getEmployees from './utils/getEmployees.js';
+import './App.css';
+
+let color = '';
 
 class App extends Component {
   state = {
-    employees: [],
-    color: ''
+    employees: []
   };
 
-  compnentDidMount() {
+  componentDidMount() {
     this.loadEmployees();
   }
 
   loadEmployees = async () => {
-    getEmployees().then((newEmployees) => {
-      const employees = newEmployees.map((employee) => {
-        const fullName =
-          employee.name.first[0].toUpperCase() +
-          employee.name.first.substring(1) +
-          ' ' +
-          employee.name.last[0].toUpperCase() +
-          employee.name.last.substring(1);
+    const employees = await getEmployees();
+    employees.data.results.forEach((employee) => {
+      const fullName =
+        employee.name.first[0].toUpperCase() +
+        employee.name.first.substring(1) +
+        ' ' +
+        employee.name.last[0].toUpperCase() +
+        employee.name.last.substring(1);
 
-        const newEmail = employee.email.replace('example.com', 'threefold.com');
+      const newEmail = employee.email.replace('example.com', 'threefold.com');
 
-        employee.name = fullName;
-        employee.email = newEmail;
-        return employee;
-      });
-      this.setState({ employees });
+      employee.name = fullName;
+      employee.email = newEmail;
     });
+    this.setState({ employees: employees.data.results });
   };
 
   alternateColor = () => {
-    this.state.color === 'green'
-      ? this.setState({ color: 'brown' })
-      : this.setState({ color: 'green' });
+    color === 'green' ? (color = 'brown') : (color = 'green');
   };
 
   render() {
@@ -45,11 +43,11 @@ class App extends Component {
       <div className='app'>
         <h1>Employee Directory</h1>
         <Container>
-          {this.state.employees.map((emp) => {
+          {this.state.employees.map((emp, idx) => {
             this.alternateColor();
             return (
               <Card
-                id={emp.id.value}
+                key={idx}
                 color={this.state.color}
                 image={emp.picture.thumbnail}
                 name={emp.name}

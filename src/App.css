@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background-color: #f6f8ff;
+  font-family: 'Open Sans', sans-serif;
+  color: #0d1321;
+}
+
+h1 {
+  font-family: 'Bitter', serif;
+  color: #0d1321;
 }
 
 .App-logo {

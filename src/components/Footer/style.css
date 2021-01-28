@@ -1,13 +1,26 @@
 .footer {
+  text-align: center;
   min-height: 100px;
-  background-color: #c5d86d;
-  color: #0d1321;
+  background-color: #40798c;
+  color: #f6f8ff;
 }
 
 .footer h5 {
-  position: absolute;
+  font-family: 'Bitter', serif;
+  font-size: 24px;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 3px;
+  padding: 20px;
+}
+
+a {
+  color: #c5d86d;
+  text-decoration: none;
+  background-color: inherit;
+  color-adjust: inherit;
+}
+
+a:hover {
+  color: #ecf2cf;
 }
