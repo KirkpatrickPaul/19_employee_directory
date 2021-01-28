@@ -1,11 +1,13 @@
 .outer-container {
   max-width: 1200px;
-  background-color: #c5d86d;
+  margin: 0 auto;
+  background-color: #ecd9d4;
   display: grid;
-  grid-template-columns: 150px 1fr 1fr 200px;
+  grid-template-columns: 200px 20rem 20rem 250px;
   justify-content: flex-start;
   gap: 10px;
 }
+
 .outer-container .label1 {
   grid-column: 2;
 }
@@ -16,4 +18,12 @@
 
 .outer-container .label3 {
   grid-column: 4;
+}
+
+.inner-container {
+  grid-column: 1 5;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: center;
 }

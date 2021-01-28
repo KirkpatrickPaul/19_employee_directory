@@ -48,8 +48,8 @@ class App extends Component {
             return (
               <Card
                 key={idx}
-                color={this.state.color}
-                image={emp.picture.thumbnail}
+                color={color}
+                image={emp.picture.medium}
                 name={emp.name}
                 email={emp.email}
                 phone={emp.phone}

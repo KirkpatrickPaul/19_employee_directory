@@ -1,0 +1,34 @@
+.card {
+  justify-self: center;
+  max-width: 1000px;
+  min-height: 80px;
+  display: grid;
+  margin: 16px auto;
+  grid-template-columns: 150px 20rem 20rem 250px;
+  justify-content: start;
+  padding: 10px;
+}
+
+.brown {
+  background-color: #764134;
+}
+
+.green {
+  background-color: #c5d86d;
+}
+
+.image {
+  grid-column: 1;
+}
+
+.name {
+  grid-column: 2;
+}
+
+.email {
+  grid-column: 3;
+}
+
+.phone {
+  grid-column: 4;
+}
