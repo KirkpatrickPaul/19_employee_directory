@@ -1,0 +1,13 @@
+.footer {
+  min-height: 100px;
+  background-color: #c5d86d;
+  color: #0d1321;
+}
+
+.footer h5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px;
+}
