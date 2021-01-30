@@ -1,16 +1,15 @@
 .header {
-  text-align: start;
+  text-align: center;
   min-height: 80px;
   background-color: #40798c;
   color: #c5d86d;
   margin-top: 0;
-  padding-left: 100px;
 }
 
 .header img {
   display: inline;
   padding-top: 5px;
-  padding-right: 8px;
+  padding-right: 10px;
   margin: auto;
 }
 .header h5 {
@@ -18,7 +17,7 @@
   font-family: 'Great Vibes', cursive;
   font-size: 42px;
   font-weight: 400;
-  vertical-align: text-bottom;
+  vertical-align:text-bottom;
   text-shadow: 2px 2px 4px #0d1321;
   margin: auto;
   padding: 0 10px 0 15px;

@@ -11,6 +11,7 @@
   box-shadow: 4px 8px 6px#42474c;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+  vertical-align: bottom;
 }
 
 .brown {
@@ -28,16 +29,16 @@
 }
 
 .name {
-  margin: 5px 10px;
+  margin: auto;
   min-width: 100px;
 }
 
 .email {
-  margin: 5px 10px;
+  margin: auto;
   min-width: 100px;
 }
 
 .phone {
-  margin: 5px 10px;
+  margin: auto;
   min-width: 100px;
 }
