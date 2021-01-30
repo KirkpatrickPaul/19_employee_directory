@@ -1,9 +1,10 @@
 .outer-container {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #ecd9d4;
+  background-color: #ecebf3;
   gap: 10px;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px #222;
 }
 
 .inner-container {
@@ -15,27 +16,37 @@
   margin: 16px auto;
   justify-content: space-between;
   padding: 10px;
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .label0 {
   margin: 5px 0px;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 .label1 {
-  padding-left: 10px;
   margin: 5px 10px 5px 0;
   min-width: 200px;
 }
 
 .label2 {
-  padding-left: 10px;
+  padding-left: 20px;
   margin: 5px 10px;
   min-width: 200px;
 }
 
 .label3 {
   text-align: end;
-  margin: 5px 25px 5px 10px;
+  margin: 5px 20px 5px 10px;
   min-width: 200px;
+}
+
+@media (max-width: 930px) {
+  .label2 {
+    visibility: hidden;
+  }
+  .label3 {
+    visibility: hidden;
+  }
 }

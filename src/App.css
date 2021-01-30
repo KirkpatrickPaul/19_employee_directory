@@ -1,16 +1,8 @@
-/* .App {
-  text-align: center;
-  background-color: #764134;
-  font-family: 'Open Sans', sans-serif;
-  color: #0d1321;
-  border: 0 0;
-  margin: 0 0;
-  position: relative;
-}
-
 h1 {
-  font-family: 'Bitter', serif;
-  color: #0d1321;
+  background-color: #9aa0a8;
+  font-family: 'Roboto Slab', serif;
+    color: #0d1321;
+  margin-top: 0;
 }
 
 .App-logo {
@@ -46,4 +38,4 @@ h1 {
   to {
     transform: rotate(360deg);
   }
-} */
+}
