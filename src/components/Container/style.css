@@ -29,11 +29,21 @@
 .label1 {
   margin: auto;
   min-width: 200px;
+  cursor: pointer;
+  color: #40798c;
+}
+
+.label1:hover {
+  color: #764134;
 }
 
 .label2 {
   margin: auto;
   min-width: 200px;
+}
+
+.fas {
+  margin-left: 10px;
 }
 
 .label3 {

@@ -12,7 +12,10 @@ class App extends Component {
   state = {
     allEmployees: [],
     filterEmployees: [],
-    search: ''
+    search: '',
+    nameSort: '',
+    emailSort: '',
+    phoneSort: ''
   };
 
   componentDidMount() {
@@ -53,19 +56,52 @@ class App extends Component {
     this.setState({ search: value, filterEmployees });
   };
 
+  handleSort = (event) => {
+    const { name } = event.currentTarget;
+    const sort = this.state[name + 'Sort'];
+    let newSort;
+    switch (sort) {
+      case '':
+        newSort = 'fas fa-caret-up';
+        break;
+      case 'fas fa-caret-up':
+        newSort = 'fas fa-caret-down';
+        break;
+      default:
+        newSort = '';
+    }
+    const sorted = this.state.filterEmployees.sort((emp1, emp2) => {
+      if (emp1[name] < emp2[name]) {
+        return -1;
+      }
+      if (emp1[name] > emp2[name]) {
+        return 1;
+      }
+      return 0;
+    });
+    const newState = {
+      nameSort: 0,
+      emailSort: 0,
+      phoneSort: 0,
+      filterEmployees: sorted
+    };
+    newState[name + 'Sort'] = newSort;
+    this.setState({ ...newState });
+  };
+
   render() {
     return (
       <div className='app'>
         <Header />
         <h1>Employee Directory</h1>
-        <input
-          value={this.state.search}
-          name='search'
-          onChange={this.handleSearchInput}
-          type='search'
-          placeholder='Search for a name...'
-        />
-        <Container>
+        <Container
+          searchValue={this.state.search}
+          handleSearchInput={this.handleSearchInput}
+          nameSort={this.state.nameSort}
+          emailSort={this.state.emailSort}
+          phoneSort={this.state.phoneSort}
+          handleSort={this.handleSort}
+        >
           {this.state.filterEmployees.map((emp) => {
             this.alternateColor();
             return (
