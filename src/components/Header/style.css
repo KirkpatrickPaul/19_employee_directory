@@ -1,0 +1,37 @@
+.header {
+  text-align: start;
+  min-height: 80px;
+  background-color: #40798c;
+  color: #c5d86d;
+  margin-top: 0;
+  padding-left: 100px;
+}
+
+.header img {
+  display: inline;
+  padding-top: 5px;
+  padding-right: 8px;
+  margin: auto;
+}
+.header h5 {
+  display: inline;
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  font-weight: 400;
+  vertical-align: text-bottom;
+  text-shadow: 2px 2px 4px #0d1321;
+  margin: auto;
+  padding: 0 10px 0 15px;
+}
+
+.header span {
+  text-shadow: 2px 2px 4px #0d1321;
+  margin: 6px;
+  font-size: 36px;
+  color: #c5d86d;
+  font-family: 'Playfair Display SC', serif;
+}
+
+a:hover {
+  color: #ecf2cf;
+}

@@ -1,8 +1,9 @@
 h1 {
   background-color: #9aa0a8;
   font-family: 'Roboto Slab', serif;
-    color: #0d1321;
-  margin-top: 0;
+  color: #0d1321;
+  align-self: center;
+  text-align: center;
 }
 
 .App-logo {
