@@ -2,28 +2,40 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ecd9d4;
-  display: grid;
-  grid-template-columns: 200px 20rem 20rem 250px;
-  justify-content: flex-start;
   gap: 10px;
-}
-
-.outer-container .label1 {
-  grid-column: 2;
-}
-
-.outer-container .label2 {
-  grid-column: 3;
-}
-
-.outer-container .label3 {
-  grid-column: 4;
+  border-radius: 10px;
 }
 
 .inner-container {
-  grid-column: 1 5;
-  margin: 0 auto;
-  flex-direction: row;
   justify-self: center;
-  justify-content: center;
+  max-width: 1000px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px auto;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.label0 {
+  margin: 5px 0px;
+  min-width: 200px;
+}
+
+.label1 {
+  padding-left: 10px;
+  margin: 5px 10px 5px 0;
+  min-width: 200px;
+}
+
+.label2 {
+  padding-left: 10px;
+  margin: 5px 10px;
+  min-width: 200px;
+}
+
+.label3 {
+  text-align: end;
+  margin: 5px 25px 5px 10px;
+  min-width: 200px;
 }

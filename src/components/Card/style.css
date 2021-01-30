@@ -1,34 +1,41 @@
 .card {
   justify-self: center;
-  max-width: 1000px;
-  min-height: 80px;
-  display: grid;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
   margin: 16px auto;
-  grid-template-columns: 150px 20rem 20rem 250px;
-  justify-content: start;
+  justify-content: space-between;
   padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 8px 6px #333;
 }
 
 .brown {
   background-color: #764134;
+  color: #f2f6df;
 }
 
 .green {
   background-color: #c5d86d;
+  color: #1c100c;
 }
 
 .image {
-  grid-column: 1;
+  border-radius: 10px;
 }
 
 .name {
-  grid-column: 2;
+  margin: 5px 10px;
+  min-width: 100px;
 }
 
 .email {
-  grid-column: 3;
+  margin: 5px 10px;
+  min-width: 100px;
 }
 
 .phone {
-  grid-column: 4;
+  margin: 5px 10px;
+  min-width: 100px;
 }
