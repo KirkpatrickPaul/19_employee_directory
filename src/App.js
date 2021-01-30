@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from "./components/Header";
+import Header from './components/Header';
 import Card from './components/Card';
 import Container from './components/Container';
 import Footer from './components/Footer';
@@ -10,7 +10,9 @@ let color = '';
 
 class App extends Component {
   state = {
-    employees: []
+    allEmployees: [],
+    filterEmployees: [],
+    search: ''
   };
 
   componentDidMount() {
@@ -19,7 +21,7 @@ class App extends Component {
 
   loadEmployees = async () => {
     const employees = await getEmployees();
-    employees.data.results.forEach((employee) => {
+    employees.data.results.forEach((employee, idx) => {
       const fullName =
         employee.name.first[0].toUpperCase() +
         employee.name.first.substring(1) +
@@ -31,12 +33,24 @@ class App extends Component {
 
       employee.name = fullName;
       employee.email = newEmail;
+      employee.key = idx;
     });
-    this.setState({ employees: employees.data.results });
+    this.setState({
+      allEmployees: employees.data.results,
+      filterEmployees: employees.data.results
+    });
   };
 
   alternateColor = () => {
     color === 'green' ? (color = 'brown') : (color = 'green');
+  };
+
+  handleSearchInput = (event) => {
+    const { value } = event.target;
+    const filterEmployees = this.state.allEmployees.filter((emp) =>
+      emp.name.toLowerCase().includes(value)
+    );
+    this.setState({ search: value, filterEmployees });
   };
 
   render() {
@@ -44,12 +58,19 @@ class App extends Component {
       <div className='app'>
         <Header />
         <h1>Employee Directory</h1>
+        <input
+          value={this.state.search}
+          name='search'
+          onChange={this.handleSearchInput}
+          type='search'
+          placeholder='Search for a name...'
+        />
         <Container>
-          {this.state.employees.map((emp, idx) => {
+          {this.state.filterEmployees.map((emp) => {
             this.alternateColor();
             return (
               <Card
-                key={idx}
+                key={emp.key}
                 color={color}
                 image={emp.picture.medium}
                 name={emp.name}
