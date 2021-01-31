@@ -13,9 +13,9 @@ class App extends Component {
     allEmployees: [],
     filterEmployees: [],
     search: '',
-    nameSort: '',
-    emailSort: '',
-    phoneSort: ''
+    nameSort: 0,
+    emailSort: 0,
+    phoneSort: 0
   };
 
   componentDidMount() {
@@ -57,36 +57,27 @@ class App extends Component {
   };
 
   handleSort = (event) => {
-    const { name } = event.currentTarget;
-    const sort = this.state[name + 'Sort'];
-    let newSort;
-    switch (sort) {
-      case '':
-        newSort = 'fas fa-caret-up';
-        break;
-      case 'fas fa-caret-up':
-        newSort = 'fas fa-caret-down';
-        break;
-      default:
-        newSort = '';
-    }
-    const sorted = this.state.filterEmployees.sort((emp1, emp2) => {
+    const name = event.currentTarget.getAttribute('name');
+    let sort = this.state[name + 'Sort'];
+    sort === 0 ? (sort = 1) : sort === 1 ? (sort = -1) : (sort = 0);
+    let sorted;
+    sorted = this.state.filterEmployees.sort((emp1, emp2) => {
       if (emp1[name] < emp2[name]) {
-        return -1;
+        return sort * -1;
       }
       if (emp1[name] > emp2[name]) {
-        return 1;
+        return sort * 1;
       }
       return 0;
     });
-    const newState = {
+    console.log('sorted :>> ', sorted);
+    this.setState({
       nameSort: 0,
       emailSort: 0,
       phoneSort: 0,
-      filterEmployees: sorted
-    };
-    newState[name + 'Sort'] = newSort;
-    this.setState({ ...newState });
+      filterEmployees: sorted,
+      [name + 'Sort']: sort
+    });
   };
 
   render() {

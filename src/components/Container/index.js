@@ -5,6 +5,7 @@ const Container = ({ children, handleSearchInput, handleSort, ...props }) => {
   return (
     <div className='container outer-container'>
       <input
+        className='search'
         value={props.search}
         name='search'
         onChange={handleSearchInput}
@@ -15,13 +16,13 @@ const Container = ({ children, handleSearchInput, handleSort, ...props }) => {
         {' '}
         <label className='label0'> </label>
         <label name='name' className='label1' onClick={handleSort}>
-          Name  <i className={props.nameSort}></i>
+          Name  
         </label>
         <label name='email' className='label2' onClick={handleSort}>
-          Email<i className={props.emailSort}></i>
+          Email
         </label>
         <label name='phone' className='label3' onClick={handleSort}>
-          Phone Number<i className={props.phoneSort}></i>
+          Phone Number  
         </label>
         {children}
       </div>
