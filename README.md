@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Three Fold Repetition's Employee Directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-## Available Scripts
+An app for anyone interested in who works for Three Fold Repetition.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Description](#Description)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Usage Guide](#Usage-Guide)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Questions and Reporting](#Questions-and-Reporting)
 
-### `npm test`
+- [License Information](#License-Information)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `npm run build`
+Interested in seeing a picture of who you've been emailing or working with over the phone? Or maybe you simply wish to find the contact information of someone you know who works there. Whatever the case, this webpage will show you all of our hardworking employees and their contact info!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This app allows a user to scroll through every employee of Three Fold Repetition, search for a specific employee, or sort employees by name, email address, or phone number. The employee's information is easy to see and use, but you may want to save it somewhere else. Unfortunately, our turnover rate is higher than we'd like.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage Guide
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Using this app is as simple as navigating in a browser to https://kirkpatrickpaul.github.io/19_employee_directory/. After that, it should look like this:
 
-### `npm run eject`
+![Three Fold Repetition's Employee Directory](./public/webpage.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Once there, the user may search for a specific employee, sort ascending or descending over the three fields, or simply scroll through the employee list and enjoy looking at everyone's personal information.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Questions and Reporting
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Okay, the gig is up. Three Fold Repetition is a chess rule, not a company name (that I know of). These employees are all computer generated from the Random User Generator API. This app was an assignement to help me learn React, classes, and functional programming. I do not forsee updating this at any time, as it is perfect just the way it is. Except the ascending and descending carets. Those things are impossible to get working, apparently. If, for some reason, you are using my app and run into problems, feel free to contact me through [my github](https://kirkpatrickpaul.github.io/contact.html).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Liscence Information
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For the Employee Directory, I use the MIT license.
