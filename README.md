@@ -22,7 +22,7 @@ This app allows a user to scroll through every employee of Three Fold Repetition
 
 ## Usage Guide
 
-Using this app is as simple as navigating in a browser to https://kirkpatrickpaul.github.io/19_employee_directory/. After that, it should look like this:
+Using this app is as simple as navigating in a browser to https://kirkpatrickpaul.github.io/employee_directory/. After that, it should look like this:
 
 ![Three Fold Repetition's Employee Directory](./public/webpage.png)
 
